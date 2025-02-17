@@ -27,7 +27,7 @@ const DynamicResumeBuilder = () => {
     }));
   };
 
-  const handleWorkExperienceChange = (index, field, value) => {
+  const handleWorkExperienceChange = (index: number, field: keyof typeof formData.workExperience[0], value: string) => {
     const newWorkExperience = [...formData.workExperience];
     newWorkExperience[index][field] = value;
     setFormData(prev => ({
